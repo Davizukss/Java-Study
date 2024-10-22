@@ -1,0 +1,37 @@
+curl --location 'localhost:8080/login' \
+--header 'Content-Type: application/json' \
+--data '{
+    "usuario": "horacio.augusto",
+    "senha": "etec123"
+}'
+
+---------------------------------------------------------------------
+
+curl --location 'http://localhost:8080/postagens' \
+--header 'Content-Type: application/json' \
+--data '{
+    "titulo": "Segurança com Spring",
+    "conteudo": "Segurança com Spring Security Segurança com Spring Security Segurança com Spring Security Segurança com Spring Security"
+}'
+
+---------------------------------------------------------------------
+
+curl --location 'http://localhost:8080/comentarios' \
+--header 'Content-Type: application/json' \
+--data '{
+    "conteudo": "Boa postagem, sensacional",
+    "postagem": {
+        "id" : 1
+    }
+}'
+
+---------------------------------------------------------------------
+
+curl --location 'http://localhost:8080/usuarios' \
+--header 'Content-Type: application/json' \
+--data '{
+    "nome": "Horácio Augusto da Silveira",
+    "login": "horacio.augusto",
+    "senha": "etec123",
+    "role": "CRIADOR"
+}'
